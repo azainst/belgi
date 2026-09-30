@@ -1,0 +1,12 @@
+# Blueprint для Render: New + → Blueprint → выберите репозиторий
+services:
+  - type: web
+    name: landmonitor
+    runtime: docker
+    plan: free
+    healthCheckPath: /healthz
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: INSPECTOR_PASSWORD
+        sync: false
